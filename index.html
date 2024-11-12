@@ -14,12 +14,14 @@
     </div>
     <div id="data"></div>
 
+    <p class="tite"><a href="https://bluesesssss.github.io/Website-Portfolio/">Home</a></p>
+
     <script>
         const baseUrl = 'https://rickandmortyapi.com/api';
-        let characterCount = 0; // Initialize character count
+        let characterCount = 0; 
 
         document.getElementById('fetch-character').addEventListener('click', () => {
-            const randomId = Math.floor(Math.random() * 826) + 1; // Random ID between 1 and 826
+            const randomId = Math.floor(Math.random() * 826) + 1; 
             fetch(`${baseUrl}/character/${randomId}`)
                 .then(res => {
                     if (!res.ok) throw new Error('Character not found');
@@ -34,9 +36,8 @@
                             <p>${character.status}, ${character.species}</p>
                         </div>
                     `;
-                    div.insertAdjacentHTML('afterbegin', characterElement); // Insert at the beginning
+                    div.insertAdjacentHTML('afterbegin', characterElement); 
 
-                    // Update character count
                     characterCount++;
                     document.getElementById('count').innerText = `Total Characters Fetched: ${characterCount}`;
                 })

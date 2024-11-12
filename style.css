@@ -64,3 +64,11 @@ img {
     border-radius: 5px;
 }
  
+.tite {
+    text-align: center;
+    text-decoration: none;
+}
+
+.tite a {
+    text-decoration: none;
+}
